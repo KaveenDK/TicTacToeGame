@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="mainLayout" spacing="20.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.tictactoe.service.BoardController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <HBox alignment="center">
+        <Label text="Tic Tac Toe" style="-fx-font-size: 24px; -fx-text-fill: #ecf0f1;" />
+    </HBox>
+
+    <GridPane fx:id="gridPane" hgap="10.0" vgap="10.0" alignment="center" style="-fx-background-color: #34495e; -fx-padding: 20;">
+        <!-- Game Buttons with fx:id attributes for each cell -->
+        <Button fx:id="button00" onAction="#onCellClicked" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #ecf0f1; -fx-font-size: 24px;" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Button fx:id="button01" onAction="#onCellClicked" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #ecf0f1; -fx-font-size: 24px;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Button fx:id="button02" onAction="#onCellClicked" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #ecf0f1; -fx-font-size: 24px;" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+        <Button fx:id="button10" onAction="#onCellClicked" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #ecf0f1; -fx-font-size: 24px;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Button fx:id="button11" onAction="#onCellClicked" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #ecf0f1; -fx-font-size: 24px;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Button fx:id="button12" onAction="#onCellClicked" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #ecf0f1; -fx-font-size: 24px;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+        <Button fx:id="button20" onAction="#onCellClicked" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #ecf0f1; -fx-font-size: 24px;" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Button fx:id="button21" onAction="#onCellClicked" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #ecf0f1; -fx-font-size: 24px;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button fx:id="button22" onAction="#onCellClicked" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #ecf0f1; -fx-font-size: 24px;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+        <columnConstraints>
+            <ColumnConstraints percentWidth="33.33" />
+            <ColumnConstraints percentWidth="33.33" />
+            <ColumnConstraints percentWidth="33.33" />
+        </columnConstraints>
+
+        <rowConstraints>
+            <RowConstraints percentHeight="33.33" />
+            <RowConstraints percentHeight="33.33" />
+            <RowConstraints percentHeight="33.33" />
+        </rowConstraints>
+    </GridPane>
+
+    <HBox spacing="20.0" alignment="center">
+        <Button fx:id="btnRestart" onAction="#onRestartClicked" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #e74c3c; -fx-text-fill: #ecf0f1; -fx-font-size: 16px;" text="Restart" />
+        <Button fx:id="btnExit" onAction="#onExitClicked" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #e74c3c; -fx-text-fill: #ecf0f1; -fx-font-size: 16px;" text="Exit" />
+    </HBox>
+</VBox>
